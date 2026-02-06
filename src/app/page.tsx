@@ -11,21 +11,52 @@ export default function Home() {
       </div>
 
       <main className="relative z-10 mx-auto max-w-4xl px-6 py-24 md:py-32">
+        {/* Top Navigation */}
+        <nav className="mb-12 flex items-center justify-between">
+          <Link href="/" className="text-sm font-mono font-bold text-sanguine hover:text-red-400 transition-colors">
+            [ ETERNITY ENGINE ]
+          </Link>
+          <Link 
+            href="/archives" 
+            className="text-xs font-mono text-zinc-400 hover:text-sanguine border border-zinc-800 hover:border-sanguine px-4 py-2 rounded transition-all hover:shadow-[0_0_15px_rgba(139,0,0,0.3)]"
+          >
+            TERMINAL ARCHIVES →
+          </Link>
+        </nav>
+
         {/* Auditor Header */}
         <div className="mb-24 flex items-center justify-between border-b border-zinc-800 pb-4 text-[10px] uppercase tracking-widest text-zinc-500">
           <div className="flex items-center gap-4">
             <span>Status: Sanguine Optimization Active</span>
             <span className="h-1 w-1 rounded-full bg-red-600 animate-pulse" />
           </div>
-          <div>Terminal ID:EB-992-X</div>
+          <div className="relative">
+            <div>Terminal ID:EB-992-X</div>
+            {/* Watching Eyes */}
+            <div className="absolute -bottom-4 right-0 flex gap-2 opacity-50 pointer-events-none">
+              {/* Left Eye */}
+              <div className="relative w-2 h-1.5 bg-gradient-to-b from-zinc-900/80 to-zinc-950/80 rounded-[50%] border border-red-950/30">
+                <div className="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-red-600 to-red-900 shadow-[0_0_8px_rgba(139,0,0,0.8)] animate-pulse"></div>
+              </div>
+              {/* Right Eye */}
+              <div className="relative w-2 h-1.5 bg-gradient-to-b from-zinc-900/80 to-zinc-950/80 rounded-[50%] border border-red-950/30">
+                <div className="absolute top-1/2 left-1/2 w-1 h-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-red-600 to-red-900 shadow-[0_0_8px_rgba(139,0,0,0.8)] animate-pulse"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Hero Section */}
         <section className="mb-32 space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl font-bold tracking-tighter md:text-7xl lg:text-8xl">
-              THE ETERNITY <br />
-              <span className="text-zinc-600">ENGINE.</span>
+            <h1 className="text-5xl font-bold tracking-tighter md:text-7xl lg:text-8xl group cursor-default">
+              <span className="inline-block transition-all duration-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-red-200 group-hover:to-white group-hover:scale-105 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+                THE ETERNITY
+              </span>{" "}
+              <br />
+              <span className="inline-block text-zinc-600 transition-all duration-500 group-hover:text-sanguine group-hover:scale-105 group-hover:drop-shadow-[0_0_30px_rgba(139,0,0,0.8)]">
+                ENGINE.
+              </span>
             </h1>
             <p className="max-w-xl text-lg font-medium tracking-tight text-zinc-400 md:text-xl">
               High-Yield Intelligence for the Immortal Elite.
@@ -85,6 +116,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Terminal Archives Showcase */}
+        <section className="mb-32 relative">
+          <div className="glass sanguine-border rounded-2xl overflow-hidden">
+            <div className="scanline"></div>
+            <div className="p-8 md:p-12">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+                <div className="space-y-4 flex-1">
+                  <h2 className="text-sm uppercase tracking-[0.2em] text-red-500 font-bold">
+                    [ RECOVERED INTELLIGENCE ]
+                  </h2>
+                  <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-100">
+                    Terminal Archives
+                  </h3>
+                  <p className="text-zinc-400 leading-relaxed max-w-xl">
+                    Access classified briefings recovered from the EB-992-X protocol. Three artifacts detailing <span className="text-zinc-300">epochal investment strategies</span>, <span className="text-zinc-300">nocturnal cognitive optimization</span>, and <span className="text-zinc-300">administrative silence protocols</span>.
+                  </p>
+                  <div className="flex flex-wrap gap-3 text-[10px] font-mono text-zinc-500 pt-2">
+                    <span className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded">THE 1742 LEDGER</span>
+                    <span className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded">SANGUINE RATIO</span>
+                    <span className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded">RENFIELD&apos;S DUTY</span>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-center md:items-end">
+                  <Link
+                    href="/archives"
+                    className="group relative"
+                  >
+                    <div className="absolute -inset-4 bg-red-900/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="relative inline-block px-8 py-4 bg-zinc-50 text-black font-bold uppercase tracking-widest text-xs hover:bg-white hover:scale-105 transition-all active:scale-95 sanguine-border">
+                      [ ACCESS ARCHIVES ]
+                    </span>
+                  </Link>
+                  <span className="text-[10px] text-zinc-600 uppercase tracking-widest mt-3">
+                    3 Artifacts Available
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Newsletter Section */}
         <section className="mb-32 text-center space-y-8">
           <div className="space-y-4">
@@ -125,6 +198,7 @@ export default function Home() {
                 [ ACCESS NOTICE ] This portal is monitored by the Nocturnal Systems Auditor. Unauthorized attempts to breach the data silos will result in [DATA EXPUNGED].
               </p>
               <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-widest text-zinc-500">
+                <Link href="/archives" className="hover:text-red-500 transition-colors">Terminal Archives</Link>
                 <Link href="/privacy" className="hover:text-red-500 transition-colors">Privacy Protocol</Link>
                 <Link href="/terms" className="hover:text-red-500 transition-colors">Terms of Engagement</Link>
                 <Link href="/disclaimer" className="hover:text-red-500 transition-colors">Liability Waiver</Link>
