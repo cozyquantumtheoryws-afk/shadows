@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shadowselfhelp.com"),
   title: "THE ETERNITY ENGINE | Sanguine Portal",
   description: "High-Yield Intelligence for the Immortal Elite. Access the [REDACTED] protocols for hyper-productivity, shadow integration, and century-scale legacy building.",
 };

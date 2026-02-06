@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-black text-zinc-50 font-sans selection:bg-red-900 selection:text-white">
@@ -83,17 +85,54 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Newsletter Section */}
+        <section className="mb-32 text-center space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-sm uppercase tracking-[0.2em] text-red-500 font-bold">
+              [ Intelligence Briefings ]
+            </h2>
+            <p className="text-2xl font-semibold tracking-tight text-zinc-200 max-w-lg mx-auto">
+              Join the Immortal Elite
+            </p>
+            <p className="text-zinc-500 max-w-md mx-auto">
+              Receive encrypted transmissions on shadow integration, epochal strategy, and nocturnal optimization protocols.
+            </p>
+          </div>
+          
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href="https://immortaleliteintheshadows.beehiiv.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+            >
+              <div className="absolute -inset-4 bg-red-900/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative inline-block px-8 py-4 border border-zinc-700 text-zinc-300 font-bold uppercase tracking-widest text-xs hover:border-red-800 hover:text-white hover:bg-zinc-900/50 transition-all">
+                [ REQUEST CLEARANCE ]
+              </span>
+            </a>
+            <span className="text-[10px] text-zinc-600 uppercase tracking-widest">
+              Secure Channel • No Mortal Data Harvesting
+            </span>
+          </div>
+        </section>
+
         {/* Footer */}
-        <footer className="mt-48 pt-12 border-t border-zinc-900">
-          <div className="flex flex-col md:flex-row justify-between gap-8 opacity-40 hover:opacity-100 transition-opacity duration-700">
-            <div className="max-w-md">
+        <footer className="mt-48 pt-12 border-t border-zinc-900 pb-24">
+          <div className="flex flex-col md:flex-row justify-between gap-12 opacity-60 hover:opacity-100 transition-opacity duration-700">
+            <div className="max-w-md space-y-4">
               <p className="text-[10px] leading-relaxed uppercase tracking-widest">
                 [ ACCESS NOTICE ] This portal is monitored by the Nocturnal Systems Auditor. Unauthorized attempts to breach the data silos will result in [DATA EXPUNGED].
               </p>
+              <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-widest text-zinc-500">
+                <Link href="/privacy" className="hover:text-red-500 transition-colors">Privacy Protocol</Link>
+                <Link href="/terms" className="hover:text-red-500 transition-colors">Terms of Engagement</Link>
+                <Link href="/disclaimer" className="hover:text-red-500 transition-colors">Liability Waiver</Link>
+              </nav>
             </div>
-            <div className="text-[10px] text-right uppercase tracking-[0.3em]">
-              © 2026 Sanguine Systems <br />
-              All Rights Reserved.
+            <div className="text-[10px] md:text-right uppercase tracking-[0.3em] flex flex-col justify-end">
+              <span>© 2026 Sanguine Systems</span>
+              <span className="text-zinc-600 mt-1">All Rights Reserved • [REDACTED]</span>
             </div>
           </div>
         </footer>
